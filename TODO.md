@@ -1,0 +1,2 @@
+ - i18n ( including for template )
+ - template path mechanism
