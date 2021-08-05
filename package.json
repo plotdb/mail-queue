@@ -1,0 +1,16 @@
+{
+  "name": "@plotdb/mail-queue",
+  "version": "0.0.1",
+  "files": [
+    "dist/**/*"
+  ],
+  "description": "for queuing mails and mail templating",
+  "main": "dist/index.js",
+  "author": "zbryikt",
+  "dependencies": {
+    "@plotdb/log": "^0.0.1",
+    "marked": "^2.3.1",
+    "livescript": "^1.6.0"
+  },
+  "license": "MIT"
+}

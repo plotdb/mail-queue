@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+rm -rf dist
+mkdir -p dist
+./node_modules/.bin/lsc -cp --no-header src/index.ls > dist/index.js
+./node_modules/.bin/lsc -cp --no-header src/md.ls > dist/md.js
