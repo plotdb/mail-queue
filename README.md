@@ -33,3 +33,7 @@ possible fields:
  - `subject`
  - `content`
 
+
+## License
+
+MIT

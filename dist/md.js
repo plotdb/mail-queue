@@ -31,10 +31,19 @@
           return unescape(text) + "\r\n\r\n";
         };
         x$.heading = function(text){
-          return "=== " + unescape(text) + " ===";
+          return "====== " + unescape(text) + " ======\r\n\r\n";
         };
         x$.image = function(href, title, text){
           return "";
+        };
+        x$.list = function(body){
+          return body + "";
+        };
+        x$.listitem = function(text){
+          return " * " + unescape(text) + "\r\n";
+        };
+        x$.codespan = function(text){
+          return "`" + text + "`";
         };
         return render;
       }()
@@ -43,11 +52,11 @@
   module.exports = {
     toText: function(it){
       marked.setOptions(option.text);
-      return marked(it);
+      return marked.parse(it);
     },
     toHtml: function(it){
       marked.setOptions(option.html);
-      return marked(it);
+      return marked.parse(it);
     }
   };
 }).call(this);

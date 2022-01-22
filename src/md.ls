@@ -14,15 +14,18 @@ option = do
         ..br = -> "\r\n"
         ..link = (href, title, text) -> unescape text
         ..paragraph = (text) -> "#{unescape(text)}\r\n\r\n"
-        ..heading = (text) -> "=== #{unescape(text)} ==="
+        ..heading = (text) -> "====== #{unescape(text)} ======\r\n\r\n"
         ..image = (href, title, text) -> ""
+        ..list = (body) -> "#body"
+        ..listitem = (text) -> " * #{unescape(text)}\r\n"
+        ..codespan = (text) -> "`#text`"
       render
 
 module.exports = do
   to-text: ->
     marked.set-options option.text
-    return marked it
+    return marked.parse it
   to-html: ->
     marked.set-options option.html
-    return marked it
+    return marked.parse it
 
